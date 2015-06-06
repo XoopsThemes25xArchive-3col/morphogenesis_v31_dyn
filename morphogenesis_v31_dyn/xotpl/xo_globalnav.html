@@ -1,0 +1,80 @@
+<div id="xo-globalnav" class="x2-nl x2-navigation">
+	<{if $xoBlocks.canvas_left && $theme_left_toggle}>
+		<div id="xo-leftcolswitch" onclick="xoToggleBlock('xo-canvas-leftcolumn');" title="<{$smarty.const.THEME_SHOWHIDE_COLUMN}>"><{$smarty.const.THEME_SHOWHIDE_COLUMN}></div>
+	<{/if}>
+	<div id="xo-globalmenu">	<ul class="xo-navigation">
+		<li class="xo-label"><{$smarty.const.THEME_NAVTITLE}> : <{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> : <{/if}><{$xoops_sitename}> - <{$xoops_meta_keywords}></li>
+		<!-- menu in anonymous mode-->
+		<li><a href="<{xoAppUrl /}>" accesskey="a"  title="<{$smarty.const.THEME_HOME_DESC}>"><{$smarty.const.THEME_HOME}></a></li>
+		<{if !$xoops_isuser}>
+		<li><a href="<{xoAppUrl modules/smartsection/}>" accesskey="" title="<{$smarty.const.THEME_MODULE1a_DESC}>"><{$smarty.const.THEME_MODULE1a}><!--[if IE 7]><!--></a><!--<![endif]-->
+				<!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="<{xoAppUrl modules/smartsection/mapage.php}>" title="Description page">MaPage1</a></li>
+                  <li><a href="<{xoAppUrl modules/smartsection/mapage.php}>" title="Description page">MaPage2</a></li>
+                  <li><a href="<{xoAppUrl modules/smartsection/mapage.php}>" title="Description page">MaPage3</a></li>
+                  <li><a href="<{xoAppUrl modules/smartsection/mapage.php}>" title="Description page">MaPage4</a></li>
+                  <li><a href="<{xoAppUrl modules/smartsection/mapage.php}>" title="Description page">MaPage5</a></li>                                    
+                </ul></li>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		<li><a href="<{xoAppUrl modules/google/}>" accesskey="" title="<{$smarty.const.THEME_MODULE2a_DESC}>"><{$smarty.const.THEME_MODULE2a}></a></li>
+		<{else}>
+		<!-- menu en mode enregistré -->
+		<li><a href="<{xoAppUrl modules/news/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE1_DESC}>"><{$smarty.const.THEME_MODULE1}><!--[if IE 7]><!--></a><!--<![endif]-->
+				<!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="<{xoAppUrl modules/news/mapage.php}>" title="Description page">MaPage1</a></li>
+                  <li><a href="<{xoAppUrl modules/news/mapage.php}>" title="Description page">MaPage2</a></li>
+                  <li><a href="<{xoAppUrl modules/news/mapage.php}>" title="Description page">MaPage3</a></li>
+                  <li><a href="<{xoAppUrl modules/news/mapage.php}>" title="Description page">MaPage4</a></li>
+                  <li><a href="<{xoAppUrl modules/news/mapage.php}>" title="Description page">MaPage5</a></li>                                   
+                </ul></li>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		<li><a href="<{xoAppUrl modules/newbb/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE2_DESC}>"><{$smarty.const.THEME_MODULE2}></a></li>
+		<li><a href="<{xoAppUrl modules/xcgal/}>" accesskey="" title="<{$smarty.const.THEME_MODULE3_DESC}>"><{$smarty.const.THEME_MODULE3}><!--[if IE 7]><!--></a><!--<![endif]-->
+				<!--[if lte IE 6]><table><tr><td><![endif]-->
+				<ul>
+                  <li><a href="<{xoAppUrl modules/xcgal/mapage.php}>" title="Description page">Gallery1</a></li>
+                  <li><a href="<{xoAppUrl modules/xcgal/mapage.php}>" title="Description page">Gallery2</a></li>
+                  <li><a href="<{xoAppUrl modules/xcgal/mapage.php}>" title="Description page">Gallery3</a></li>
+                  <li><a href="<{xoAppUrl modules/xcgal/mapage.php}>" title="Description page">Gallery4</a></li>
+                  <li><a href="<{xoAppUrl modules/xcgal/mapage.php}>" title="Description page">Gallery5</a></li>                                   
+                </ul></li>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		<li><a href="<{xoAppUrl modules/smartmedia/}>" accesskey="" title="<{$smarty.const.THEME_MODULE4_DESC}>"><{$smarty.const.THEME_MODULE4}><!--[if IE 7]><!--></a><!--<![endif]-->
+				<!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a href="<{xoAppUrl modules/smartmedia/mapage.php}>" title="Description page">Media1</a></li>
+                  <li><a href="<{xoAppUrl modules/smartmedia/mapage.php}>" title="Description page">Media2</a></li>
+                  <li><a href="<{xoAppUrl modules/smartmedia/mapage.php}>" title="Description page">Media3</a></li>
+                  <li><a href="<{xoAppUrl modules/smartmedia/mapage.php}>" title="Description page">Media4</a></li>
+                  <li><a href="<{xoAppUrl modules/smartmedia/mapage.php}>" title="Description page">Media5</a></li>                                    
+                </ul></li>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		<li><a href="<{xoAppUrl modules/addresses/}>" accesskey="" title="<{$smarty.const.THEME_MODULE5_DESC}>"><{$smarty.const.THEME_MODULE5}></a></li>
+		<li><a href="<{xoAppUrl modules/mydownloads/}>" accesskey="" title="<{$smarty.const.THEME_MODULE6_DESC}>"><{$smarty.const.THEME_MODULE6}></a></li>
+		
+		<{if $xoops_isadmin}>
+		<!-- lien supplémentaire si je suis administrateur -->
+		<li><a href="<{xoAppUrl modules/xoopsinfo/}>" accesskey="" title="<{$smarty.const.THEME_MODULE7_DESC}>"><{$smarty.const.THEME_MODULE7}></a></li>
+		<li><a href="<{xoAppUrl modules/protector/admin/}>" accesskey="" title="<{$smarty.const.THEME_MODULE8_DESC}>"><{$smarty.const.THEME_MODULE8}></a></li>
+		<li><a href="<{xoAppUrl modules/system/admin.php}>" accesskey="p" title="Administration">Administration<!--[if IE 7]><!--></a><!--<![endif]-->
+				<!--[if lte IE 6]><table><tr><td><![endif]-->
+                <ul>
+                  <li><a rel="external" href="<{xoAppUrl modules/system/admin.php?fct=preferences}>" title="<{$smarty.const.THEME_PREF}>"><{$smarty.const.THEME_PREF}></a></li>
+                  <li><a rel="external" href="<{xoAppUrl modules/system/admin.php?fct=preferences&op=show&confcat_id=1}>" title="<{$smarty.const.THEME_CPHOME}>"><{$smarty.const.THEME_CPHOME}></a></li>
+				  <li><a rel="external" href="<{xoAppUrl modules/system/admin.php?fct=modulesadmin}>" title="<{$smarty.const.THEME_INSTALLEDMODULES}>"><{$smarty.const.THEME_INSTALLEDMODULES}></a></li>
+                  <li><a rel="external" href="<{xoAppUrl modules/system/admin.php?fct=images}>" title="<{$smarty.const.THEME_IMAGES}>"><{$smarty.const.THEME_IMAGES}></a></li>
+                </ul></li>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+		<{/if}>
+		<{/if}>
+		<li><a href="<{xoAppUrl modules/contact/}>" accesskey="c" title="<{$smarty.const.THEME_CONTACT_DESC}>"><{$smarty.const.THEME_CONTACT}></a></li>
+	</ul>
+	</div>
+	<{if $xoBlocks.canvas_right && $theme_right_toggle}>
+		<div id="xo-rightcolswitch" onclick="xoToggleBlock('xo-canvas-rightcolumn');" title="<{$smarty.const.THEME_SHOWHIDE_COLUMN}>"><{$smarty.const.THEME_SHOWHIDE_COLUMN}></div>
+	<{/if}>	
+	
+	
+	</div>
